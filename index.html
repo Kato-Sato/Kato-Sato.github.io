@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <title>家計簿</title>    <!-- タイトル -->
+        <meta name="description" content="">    <!-- コンテンツ名 -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- フォント -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet"> -->
+
+        <!-- Java Script -->
+        <script src="jquery-4.0.0.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <ul id="menu-tab">
+                <li class="menu-item" data-target="page-home">ホーム</li>
+                <li class="menu-item" data-target="page-list">取引一覧</li>
+                <li class="menu-item" data-target="page-out">支出</li>
+                <li class="menu-item" data-target="page-in">収入</li>
+                <li class="menu-item" data-target="page-tag">タグ</li>
+                <li class="menu-item" data-target="page-special">特別支出</li>
+                <li class="menu-item" data-target="page-setting">設定</li>
+            </ul>
+        </header>
+        <footer>
+        </footer>
+
+        <section id="page-home" class="page">
+            <h2 id="home-date-display" class="page-title"></h2>
+            <div class="home-dashboard">
+                <div class="dashboard-card">
+                    <table id="table-home-accounts" class="modern-table"></table>
+                </div>
+                <div class="dashboard-card">
+                    <table id="table-home-credit" class="modern-table"></table>
+                </div>
+            </div>
+        </section>
+        <section id="page-list" class="page hidden">
+            <table id="table-list"></table>
+        </section>
+        <section id="page-out" class="page hidden">
+            <table id="table-out"></table>
+            <div id="out-detail-area" class="hidden">
+                <div class="detail-header">
+                    <h3 id="out-detail-title"></h3>
+                    <button id="close-out-detail">閉じる</button>
+                </div>
+                <table id="table-out-detail"></table>
+            </div>
+        </section>
+        <section id="page-in" class="page hidden">
+            <table id="table-in"></table>
+        </section>
+        <section id="page-tag" class="page hidden">
+            <div id="tagevent-wrapper"></div>
+        </section>
+        <section id="page-special" class="page hidden">
+            <div id="specialevent-wrapper"></div>
+        </section>
+        <section id="page-setting" class="page hidden">
+        </section>
+    </body>
+</html>
